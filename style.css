@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+section {
+  height: 40rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  background-color: rgb(36, 36, 48);
+  border-radius: 3rem;
+}
+
+header {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0; 
+  justify-content: space-around;
+}
+
+.logo {
+  color: white;    
+}
+
+input {
+  height: 2.5rem;
+  width: 17rem;
+  font-size: 2rem;
+  text-align: right;
+  background-color: rgb(187, 218, 207);
+  border-radius: 0.5rem;
+  border: 0.325rem solid black;  
+  font-family: 'Orbitron', sans-serif;
+}
+
+.text-function {
+  text-align: center;
+  color: rgb(92, 92, 100);
+  font-size: 1.3rem;
+}
+
+.button-ce {
+  border-radius: 50%;
+  background-color: aquamarine;
+  height: 4rem;
+}
+
+.button-function {
+  color:white;
+  background-color: yellow;
+  height: 2rem;
+  border-radius: 40%;
+}
+
+.button-plus {
+  height: 6rem;
+  background-color: green;  
+}
+
+button {
+  height: 3.0rem;
+  width: 4.5rem;
+  font-size: 2.2rem;
+  margin: 0.0625rem;  
+  border-radius: 1rem;
+  color: white;
+  background-color: rgb(23, 23, 32);
+  border: 0.325rem solid black;
+}
+
+
+
+
+
+

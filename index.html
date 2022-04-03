@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eletronic Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1 class="logo">Eletronic calculator</h1>
+        <input type="text" id="screen" autofocus="true" />
+      </header>
+      <main>
+        <div class="functions">
+          <table>
+            <tr>
+              <td rowspan="2">
+                <button class="button-ce" id="funcCE" style="font-size: 1.3rem">
+                  CE
+                </button>
+              </td>
+              <td class="text-function">MRC</td>
+              <td class="text-function">M-</td>
+              <td class="text-function">M+</td>
+            </tr>
+
+            <tr>
+              <td><button class="button-function" id="funcMRC"></button></td>
+              <td>
+                <button class="button-function" id="funcMPlus"></button>
+              </td>
+              <td><button class="button-function" id="funcMMinus"></button></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="num-ope">
+          <table>
+            <tr>
+              <td>
+                <button class="char" style="font-size: 1.3rem">OFF</button>
+              </td>
+              <td><button class="char">√</button></td>
+              <td><button class="char">%</button></td>
+              <td><button class="char" id="opDivide" value="/">/</button></td>
+            </tr>
+            <tr>
+              <td><button class="char" id="num7" value="7">7</button></td>
+              <td><button class="char" id="num8" value="8">8</button></td>
+              <td><button class="char" id="num9" value="9">9</button></td>
+              <td><button class="char" id="opMultiply" value="*">X</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td><button class="char" id="num4" value="4">4</button></td>
+              <td><button class="char" id="num5" value="5">5</button></td>
+              <td><button class="char" id="num6" value="6">6</button></td>
+              <td><button class="char" id="opMinus" value="-">-</button></td>
+            </tr>
+            <tr>
+              <td><button class="char" id="num1" value="1">1</button></td>
+              <td><button class="char" id="num2" value="2">2</button></td>
+              <td><button class="char" id="num3" value="3">3</button></td>
+              <td rowspan="2">
+                <button class="button-plus" id="opPlus" value="+">+</button>
+              </td>
+            </tr>
+            <tr>
+              <td><button class="char" id="num0">0</button></td>
+              <td><button class="char">.</button></td>
+              <td><button class="char">=</button></td>
+            </tr>
+          </table>
+        </div>
+      </main>
+    </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
