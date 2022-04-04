@@ -13,6 +13,7 @@ const buttonMinus = document.getElementById('opMinus')
 const buttonMultiply = document.getElementById('opMultiply')
 const buttonDivide = document.getElementById('opDivide')
 const buttonCE = document.getElementById('funcCE')
+const buttonEquals = document.getElementById('opEquals')
 
 button0.addEventListener('click', function () {
   const screen = document.getElementById('screen')
@@ -66,25 +67,59 @@ button9.addEventListener('click', function () {
 
 buttonPlus.addEventListener('click', function () {
   const screen = document.getElementById('screen')
-  screen.value += buttonPlus.value
+  let lastCharScreen = Array.from(screen.value).pop()
+  if (screen.value != '' && lastCharScreen != '+') {
+    screen.value += buttonPlus.value
+  }
 })
 
 buttonMinus.addEventListener('click', function () {
   const screen = document.getElementById('screen')
-  screen.value += buttonMinus.value
+  let lastCharScreen = Array.from(screen.value).pop()
+  if (screen.value != '' && lastCharScreen != '-') {
+    screen.value += buttonMinus.value
+  }
 })
 
 buttonMultiply.addEventListener('click', function () {
   const screen = document.getElementById('screen')
-  screen.value += buttonMultiply.value
+  let lastCharScreen = Array.from(screen.value).pop()
+  if (screen.value != '' && lastCharScreen != '*') {
+    screen.value += buttonMultiply.value
+  }
 })
 
 buttonDivide.addEventListener('click', function () {
   const screen = document.getElementById('screen')
-  screen.value += buttonDivide.value
+  let lastCharScreen = Array.from(screen.value).pop()
+  if (screen.value != '' && lastCharScreen != '/') {
+    screen.value += buttonDivide.value
+  }
 })
 
 buttonCE.addEventListener('click', function () {
   const screen = document.getElementById('screen')
   screen.value = ''
+})
+
+buttonEquals.addEventListener('click', function () {
+  const screen = document.getElementById('screen')
+  let arrayScreen = Array.from(screen.value)
+  console.log(arrayScreen)
+  switch (arrayScreen[1]) {
+    case '+':
+      screen.value = Number(arrayScreen[0]) + Number(arrayScreen[2])
+      break
+
+    case '-':
+      screen.value = Number(arrayScreen[0]) - Number(arrayScreen[2])
+
+    case '*':
+      screen.value = Number(arrayScreen[0]) * Number(arrayScreen[2])
+      break
+
+    case '/':
+      screen.value = Number(arrayScreen[0]) / Number(arrayScreen[2])
+      break
+  }
 })

@@ -37,14 +37,15 @@ header {
 }
 
 input {
-  height: 2.5rem;
+  height: 3rem;
   width: 17rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: right;
   background-color: rgb(187, 218, 207);
   border-radius: 0.5rem;
   border: 0.325rem solid black;  
   font-family: 'Orbitron', sans-serif;
+  
 }
 
 .text-function {
@@ -73,9 +74,9 @@ input {
 
 button {
   height: 3.0rem;
-  width: 4.5rem;
+  width: 4rem;
   font-size: 2.2rem;
-  margin: 0.0625rem;  
+  margin: 0.1rem;  
   border-radius: 1rem;
   color: white;
   background-color: rgb(23, 23, 32);
