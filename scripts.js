@@ -1,125 +1,166 @@
-const button0 = document.getElementById('num0')
-const button1 = document.getElementById('num1')
-const button2 = document.getElementById('num2')
-const button3 = document.getElementById('num3')
-const button4 = document.getElementById('num4')
-const button5 = document.getElementById('num5')
-const button6 = document.getElementById('num6')
-const button7 = document.getElementById('num7')
-const button8 = document.getElementById('num8')
-const button9 = document.getElementById('num9')
-const buttonPlus = document.getElementById('opPlus')
-const buttonMinus = document.getElementById('opMinus')
-const buttonMultiply = document.getElementById('opMultiply')
-const buttonDivide = document.getElementById('opDivide')
-const buttonCE = document.getElementById('funcCE')
-const buttonEquals = document.getElementById('opEquals')
+const screen = document.getElementById('screen')
+let operator
+let countOperator = 0
+let countDot = 0
+console.log(screen.value)
 
-button0.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button0.value
+const button0 = document.getElementById('button0')
+const button1 = document.getElementById('button1')
+const button2 = document.getElementById('button2')
+const button3 = document.getElementById('button3')
+const button4 = document.getElementById('button4')
+const button5 = document.getElementById('button5')
+const button6 = document.getElementById('button6')
+const button7 = document.getElementById('button7')
+const button8 = document.getElementById('button8')
+const button9 = document.getElementById('button9')
+const buttonDot = document.getElementById('buttonDot')
+const buttonPlus = document.getElementById('buttonPlus')
+const buttonMinus = document.getElementById('buttonMinus')
+const buttonMultiply = document.getElementById('buttonMultiply')
+const buttonDivide = document.getElementById('buttonDivide')
+const buttonCE = document.getElementById('buttonCE')
+const buttonOFF = document.getElementById('buttonOFF')
+const buttonEquals = document.getElementById('buttonEquals')
+
+button0.addEventListener('click', () => {
+  screen.value += '0'
+  console.log(screen.value)
 })
-
-button1.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button1.value
+button1.addEventListener('click', () => {
+  screen.value += '1'
+  console.log(screen.value)
 })
-
-button2.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button2.value
+button2.addEventListener('click', () => {
+  screen.value += '2'
+  console.log(screen.value)
 })
-
-button3.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button3.value
+button3.addEventListener('click', () => {
+  screen.value += '3'
+  console.log(screen.value)
 })
-
-button4.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button4.value
+button4.addEventListener('click', () => {
+  screen.value += '4'
+  console.log(screen.value)
 })
-
-button5.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button5.value
+button5.addEventListener('click', () => {
+  screen.value += '5'
+  console.log(screen.value)
 })
-
-button6.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button6.value
+button6.addEventListener('click', () => {
+  screen.value += '6'
+  console.log(screen.value)
 })
-
-button7.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button7.value
+button7.addEventListener('click', () => {
+  screen.value += '7'
+  console.log(screen.value)
 })
-
-button8.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button8.value
+button8.addEventListener('click', () => {
+  screen.value += '9'
+  console.log(screen.value)
 })
-
-button9.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value += button9.value
+button9.addEventListener('click', () => {
+  screen.value += '9'
+  console.log(screen.value)
 })
-
-buttonPlus.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  let lastCharScreen = Array.from(screen.value).pop()
-  if (screen.value != '' && lastCharScreen != '+') {
-    screen.value += buttonPlus.value
+buttonDot.addEventListener('click', () => {
+  if (!screen.value.endsWith('.') && !screen.value == '') {
+    screen.value += '.'
   }
+  console.log(screen.value)
 })
 
-buttonMinus.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  let lastCharScreen = Array.from(screen.value).pop()
-  if (screen.value != '' && lastCharScreen != '-') {
-    screen.value += buttonMinus.value
+buttonCE.addEventListener('click', clearScreen)
+buttonOFF.addEventListener('click', clearScreen)
+
+buttonPlus.addEventListener('click', () => {
+  if (countOperator == 1) {
+    buttonEqualsFunction()
+  } else {
+    countOperator += 1
   }
+  operator = '+'
+  screen.value += '+'
+  console.log(operator)
 })
 
-buttonMultiply.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  let lastCharScreen = Array.from(screen.value).pop()
-  if (screen.value != '' && lastCharScreen != '*') {
-    screen.value += buttonMultiply.value
+buttonMinus.addEventListener('click', () => {
+  if (countOperator == 1) {
+    buttonEqualsFunction()
+  } else {
+    countOperator += 1
   }
+  operator = '-'
+  screen.value += '-'
+  console.log(operator)
 })
 
-buttonDivide.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  let lastCharScreen = Array.from(screen.value).pop()
-  if (screen.value != '' && lastCharScreen != '/') {
-    screen.value += buttonDivide.value
+buttonMultiply.addEventListener('click', () => {
+  if (countOperator == 1) {
+    buttonEqualsFunction()
+  } else {
+    countOperator += 1
   }
+  operator = '*'
+  screen.value += '*'
+  console.log(operator)
 })
 
-buttonCE.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  screen.value = ''
+buttonDivide.addEventListener('click', () => {
+  if (countOperator == 1) {
+    buttonEqualsFunction()
+  } else {
+    countOperator += 1
+  }
+  operator = '/'
+  screen.value += '/'
+  console.log(operator)
 })
 
-buttonEquals.addEventListener('click', function () {
-  const screen = document.getElementById('screen')
-  let arrayScreen = Array.from(screen.value)
-  console.log(arrayScreen)
-  switch (arrayScreen[1]) {
+buttonEquals.addEventListener('click', buttonEqualsFunction)
+
+function buttonEqualsFunction() {
+  switch (operator) {
     case '+':
-      screen.value = Number(arrayScreen[0]) + Number(arrayScreen[2])
+      screen.value = screen.value
+        .split('+')
+        .map(valor => Number(valor))
+        .reduce((acumulador, valor) => {
+          return acumulador + valor
+        })
       break
 
     case '-':
-      screen.value = Number(arrayScreen[0]) - Number(arrayScreen[2])
+      screen.value = screen.value
+        .split('-')
+        .map(valor => Number(valor))
+        .reduce((acumulador, valor) => {
+          return acumulador - valor
+        })
+      break
 
     case '*':
-      screen.value = Number(arrayScreen[0]) * Number(arrayScreen[2])
+      screen.value = screen.value
+        .split('*')
+        .map(valor => Number(valor))
+        .reduce((acumulador, valor) => {
+          return acumulador * valor
+        })
       break
 
     case '/':
-      screen.value = Number(arrayScreen[0]) / Number(arrayScreen[2])
+      screen.value = screen.value
+        .split('/')
+        .map(valor => Number(valor))
+        .reduce((acumulador, valor) => {
+          return acumulador / valor
+        })
       break
   }
-})
+}
+
+function clearScreen() {
+  screen.value = ''
+  countOperator = 0
+  operator = ''
+}

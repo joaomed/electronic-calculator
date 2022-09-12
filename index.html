@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eletronic Calculator</title>
     <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,14 +20,13 @@
         <h1 class="logo">Eletronic calculator</h1>
         <input type="text" id="screen" autofocus="true" />
       </header>
+
       <main>
         <div class="functions">
           <table>
             <tr>
               <td rowspan="2">
-                <button class="button-ce" id="funcCE" style="font-size: 1.3rem">
-                  CE
-                </button>
+                <button id="buttonCE" style="font-size: 1.3rem">CE</button>
               </td>
               <td class="text-function">MRC</td>
               <td class="text-function">M-</td>
@@ -34,11 +34,13 @@
             </tr>
 
             <tr>
-              <td><button class="button-function" id="funcMRC"></button></td>
               <td>
-                <button class="button-function" id="funcMPlus"></button>
+                <button id="buttonFunction"></button>
               </td>
-              <td><button class="button-function" id="funcMMinus"></button></td>
+              <td>
+                <button id="buttonFunction"></button>
+              </td>
+              <td><button id="buttonFunction"></button></td>
             </tr>
           </table>
         </div>
@@ -47,37 +49,48 @@
           <table>
             <tr>
               <td>
-                <button class="char" style="font-size: 1.3rem">OFF</button>
+                <button class="char" id="buttonOFF" style="font-size: 1.3rem">
+                  OFF
+                </button>
               </td>
-              <td><button class="char">√</button></td>
-              <td><button class="char">%</button></td>
-              <td><button class="char" id="opDivide" value="/">/</button></td>
+              <td><button class="char" id="buttonSquareRoot">√</button></td>
+              <td><button class="char" id="buttonPercentage">%</button></td>
+              <td>
+                <button class="char" id="buttonDivide" value="/">/</button>
+              </td>
             </tr>
+
             <tr>
-              <td><button class="char" id="num7" value="7">7</button></td>
-              <td><button class="char" id="num8" value="8">8</button></td>
-              <td><button class="char" id="num9" value="9">9</button></td>
-              <td><button class="char" id="opMultiply" value="*">X</button></td>
+              <td><button class="char" id="button7" value="7">7</button></td>
+              <td><button class="char" id="button8" value="8">8</button></td>
+              <td><button class="char" id="button9" value="9">9</button></td>
+              <td>
+                <button class="char" id="buttonMultiply" value="*">X</button>
+              </td>
             </tr>
-            <tr></tr>
+
             <tr>
-              <td><button class="char" id="num4" value="4">4</button></td>
-              <td><button class="char" id="num5" value="5">5</button></td>
-              <td><button class="char" id="num6" value="6">6</button></td>
-              <td><button class="char" id="opMinus" value="-">-</button></td>
+              <td><button class="char" id="button4" value="4">4</button></td>
+              <td><button class="char" id="button5" value="5">5</button></td>
+              <td><button class="char" id="button6" value="6">6</button></td>
+              <td>
+                <button class="char" id="buttonMinus" value="-">-</button>
+              </td>
             </tr>
+
             <tr>
-              <td><button class="char" id="num1" value="1">1</button></td>
-              <td><button class="char" id="num2" value="2">2</button></td>
-              <td><button class="char" id="num3" value="3">3</button></td>
+              <td><button class="char" id="button1" value="1">1</button></td>
+              <td><button class="char" id="button2" value="2">2</button></td>
+              <td><button class="char" id="button3" value="3">3</button></td>
               <td rowspan="2">
-                <button class="button-plus" id="opPlus" value="+">+</button>
+                <button id="buttonPlus" value="+">+</button>
               </td>
             </tr>
+
             <tr>
-              <td><button class="char" id="num0">0</button></td>
-              <td><button class="char">.</button></td>
-              <td><button class="char" id="opEquals">=</button></td>
+              <td><button class="char" id="button0">0</button></td>
+              <td><button class="char" id="buttonDot">.</button></td>
+              <td><button class="char" id="buttonEquals">=</button></td>
             </tr>
           </table>
         </div>

@@ -1,15 +1,21 @@
-*{
+@font-face {
+  font-family: 'Calculator';
+  src: url('./public/Calculator.ttf');
+}
+
+* {
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
 body {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
 }
 
 section {
@@ -18,7 +24,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   background-color: rgb(36, 36, 48);
   border-radius: 3rem;
 }
@@ -28,24 +34,24 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0; 
+  margin: 2rem 0;
   justify-content: space-around;
 }
 
 .logo {
-  color: white;    
+  color: white;
 }
 
 input {
   height: 3rem;
   width: 17rem;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 600;
   text-align: right;
   background-color: rgb(187, 218, 207);
   border-radius: 0.5rem;
-  border: 0.325rem solid black;  
-  font-family: 'Orbitron', sans-serif;
-  
+  border: 0.325rem solid black;
+  font-family: 'Calculator', sans-serif;
 }
 
 .text-function {
@@ -54,37 +60,31 @@ input {
   font-size: 1.3rem;
 }
 
-.button-ce {
+#buttonCE {
   border-radius: 50%;
-  background-color: aquamarine;
+  background-color: green;
   height: 4rem;
 }
 
-.button-function {
-  color:white;
+#buttonFunction {
+  color: white;
   background-color: yellow;
   height: 2rem;
   border-radius: 40%;
 }
 
-.button-plus {
+#buttonPlus {
   height: 6rem;
-  background-color: green;  
+  background-color: green;
 }
 
 button {
-  height: 3.0rem;
+  height: 3rem;
   width: 4rem;
   font-size: 2.2rem;
-  margin: 0.1rem;  
+  margin: 0.1rem;
   border-radius: 1rem;
   color: white;
   background-color: rgb(23, 23, 32);
   border: 0.325rem solid black;
 }
-
-
-
-
-
-
