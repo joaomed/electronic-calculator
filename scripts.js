@@ -56,7 +56,7 @@ button7.addEventListener('click', () => {
   console.log(screen.value)
 })
 button8.addEventListener('click', () => {
-  screen.value += '9'
+  screen.value += '8'
   console.log(screen.value)
 })
 button9.addEventListener('click', () => {
